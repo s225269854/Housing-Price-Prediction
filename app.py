@@ -34,25 +34,38 @@ with st.form("property_input_form"):
     # Location and Property type
     col1, col2 = st.columns(2)
     with col1:
-        suburb = st.selectbox("Suburb", ["Liverpool", "Canterbury", "Parramatta"])
+        suburb = st.selectbox("Suburb", ["Liverpool", "Canterbury", "Parramatta"],
+                              index=None, 
+                              placeholder="Select a Suburb")
     with col2:
-        property_type = st.selectbox("Property Type", ["Apartment / Unit", "House", "Other"])
+        property_type = st.selectbox("Property Type", ["Apartment / Unit", "House", "Other"],
+                              index=None, 
+                              placeholder="Select a Property Type")
 
     # Bedrooms, Bathrooms and Parking
     col3, col4, col5 = st.columns(3)
     with col3:
-        bedrooms = st.number_input("Bedrooms", min_value=1, max_value=12, value=2, step=1)
+        bedrooms = st.number_input("Bedrooms", min_value=1, max_value=12, value=None, 
+            step=1, 
+            placeholder="Enter no. of Bedrooms")
     with col4:
-        bathrooms = st.number_input("Bathrooms", min_value=1, max_value=6, value=1, step=1)
+        bathrooms = st.number_input("Bathrooms", min_value=1, max_value=6, value=None, 
+            step=1, 
+            placeholder="Enter no. of Bathrooms")
     with col5:
-        parking = st.number_input("Parking Spaces", min_value=0, max_value=6, value=1, step=1)
+        parking = st.number_input("Parking Spaces", min_value=0, max_value=6, value=None, 
+            step=1, 
+            placeholder="Enter Parking Space")
 
     # Floor size and Sale Month
     col6, col7 = st.columns(2)
     with col6:
-        floor_area = st.number_input("Floor Area (m²)", min_value=1.0, value=100.0, step=5.0)
+        floor_area = st.number_input("Floor Area (m²)", min_value=1.0, value=None, 
+            step=5.0, 
+            placeholder="Enter Floor Areas size")
     with col7:
-        sale_month_name = st.selectbox("Sale Month", list(month_mapping.keys()), index=7)
+        sale_month_name = st.selectbox("Sale Month", list(month_mapping.keys()),index=None, 
+            placeholder="Select Sale Month")
 
     submit_button = st.form_submit_button("Estimate Price", type="primary")
 
