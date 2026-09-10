@@ -1,5 +1,9 @@
 # Sydney Housing Price Prediction and Decision Support System
 
+## Live Application
+
+The deployed Streamlit application is available here: https://sit720-8d-housing-price-prediction.streamlit.app/
+
 This repository contains the supporting files for the SIT720 8.1D Machine Learning Mini Project.
 
 The project develops an end-to-end machine learning workflow for predicting property sale prices across Liverpool, Canterbury and Parramatta. The final Ridge Regression pipeline is deployed through a Streamlit web application.
